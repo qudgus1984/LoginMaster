@@ -52,7 +52,6 @@ class APIService {
             
             switch response.result {
             case .success(let data):
-                data.user.email
                 print(data)
                 
             case .failure(_):

@@ -9,7 +9,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class LoginViewModel: CommonViewModel {
+class LoginViewModel {
     var loginEmail = BehaviorRelay<String>(value: "")
     var loginPassword = BehaviorRelay<String>(value: "")
     

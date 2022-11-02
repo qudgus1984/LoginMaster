@@ -35,6 +35,7 @@
 		2FB1095929127C2F00823F4E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095829127C2F00823F4E /* LoginViewModel.swift */; };
 		2FB1095C29128AA500823F4E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095B29128AA500823F4E /* ProfileViewModel.swift */; };
 		2FB1095E2912A00400823F4E /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095D2912A00400823F4E /* CommonViewModel.swift */; };
+		2FB109602912AA9C00823F4E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095F2912AA9C00823F4E /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		2FB1095829127C2F00823F4E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2FB1095B29128AA500823F4E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2FB1095D2912A00400823F4E /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		2FB1095F2912AA9C00823F4E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				2FA477872912610500AD4CB8 /* Endpoint.swift */,
 				2FA477892912614700AD4CB8 /* APIService.swift */,
+				2FB1095F2912AA9C00823F4E /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				2FA4777E2912365A00AD4CB8 /* SignupViewController.swift in Sources */,
 				2FA47763291231BB00AD4CB8 /* BaseTableViewCell.swift in Sources */,
 				2FA477882912610500AD4CB8 /* Endpoint.swift in Sources */,
+				2FB109602912AA9C00823F4E /* NetworkError.swift in Sources */,
 				2FA47765291231BB00AD4CB8 /* BaseView.swift in Sources */,
 				2FA4773C2912319C00AD4CB8 /* SceneDelegate.swift in Sources */,
 				2FA477812912367E00AD4CB8 /* LoginView.swift in Sources */,

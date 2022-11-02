@@ -109,9 +109,26 @@ final class SignupViewController: BaseViewController {
             .withUnretained(self)
             .bind { (vc, _) in
                 
-                vc.viewModel.postSignup(name: vc.mainview.userNameLabel.text!, email: vc.mainview.emailLabel.text!, password: vc.mainview.passwordLabel.text!)
-                vc.present(LoginViewController(), animated: true)
+                vc.viewModel.requestSignup(name: vc.mainview.userNameLabel.text!, email: vc.mainview.emailLabel.text!, password: vc.mainview.passwordLabel.text!)
+                
+                
+//                vc.viewModel.postSignup(name: vc.mainview.userNameLabel.text!, email: vc.mainview.emailLabel.text!, password: vc.mainview.passwordLabel.text!)
             }
+        
+        viewModel.isSucceed
+            .withUnretained(self)
+            .observe(on: MainScheduler.instance)// 뜻 알아보기
+            .subscribe { vc, value in
+                vc.present(LoginViewController(), animated: true)
+            } onError: { error in
+                self.presentAlert(title: "회원가입실패 \(error)")
+            } onCompleted: {
+                print("완료")
+            } onDisposed: {
+                print("종료")
+            }
+            .disposed(by: disposeBag)
+
     }
 }
 
