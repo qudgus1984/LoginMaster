@@ -29,6 +29,19 @@ class LoginViewController: BaseViewController {
     }
     
     func validButtonBind() {
+        /*
+        let input = LoginViewModel.Input(emailText: mainview.emailLabel.rx.text, pwText: mainview.passwordLabel.rx.text)
+        let output = viewModel.transform(input: input)
+        
+        output.emailText
+            .drive(viewModel.loginEmail)
+            .disposed(by: disposeBag)
+        
+        output.pwText
+            .drive(viewModel.loginPassword)
+            .disposed(by: disposeBag)
+        */
+        
         mainview.emailLabel.rx.text
             .orEmpty
             .asDriver()

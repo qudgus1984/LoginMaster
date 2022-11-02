@@ -9,7 +9,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class LoginViewModel {
+class LoginViewModel: CommonViewModel {
     var loginEmail = BehaviorRelay<String>(value: "")
     var loginPassword = BehaviorRelay<String>(value: "")
     
@@ -24,4 +24,20 @@ class LoginViewModel {
     func postLogin(email: String, password: String) {
         APIService().login(api: SeSACAPI.login(email: email, password: password))
     }
+    /*
+    struct Input {
+        let emailText: ControlProperty<String?>
+        let pwText: ControlProperty<String?>
+    }
+    
+    struct Output {
+        let emailText: Driver<String>
+        let pwText: Driver<String>
+    }
+    func transform(input: Input) -> Output {
+        let emailText = loginEmail.asDriver()
+        let pwText = loginPassword.asDriver()
+        return Output(emailText: emailText, pwText: pwText)
+    }
+     */
 }

@@ -34,6 +34,7 @@
 		2FA4778A2912614700AD4CB8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA477892912614700AD4CB8 /* APIService.swift */; };
 		2FB1095929127C2F00823F4E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095829127C2F00823F4E /* LoginViewModel.swift */; };
 		2FB1095C29128AA500823F4E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095B29128AA500823F4E /* ProfileViewModel.swift */; };
+		2FB1095E2912A00400823F4E /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095D2912A00400823F4E /* CommonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		2FA477892912614700AD4CB8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2FB1095829127C2F00823F4E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2FB1095B29128AA500823F4E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		2FB1095D2912A00400823F4E /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA47755291231BA00AD4CB8 /* ReusableProtocol.swift */,
+				2FB1095D2912A00400823F4E /* CommonViewModel.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				2FA477692912322B00AD4CB8 /* ProfileView.swift in Sources */,
 				2FA47761291231BB00AD4CB8 /* ReusableProtocol.swift in Sources */,
 				2FA477862912466A00AD4CB8 /* SignupViewModel.swift in Sources */,
+				2FB1095E2912A00400823F4E /* CommonViewModel.swift in Sources */,
 				2FB1095929127C2F00823F4E /* LoginViewModel.swift in Sources */,
 				2FA47760291231BB00AD4CB8 /* UIViewController+.swift in Sources */,
 				2FA4777E2912365A00AD4CB8 /* SignupViewController.swift in Sources */,

@@ -9,6 +9,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
+
 final class SignupViewModel {
     let validName = BehaviorRelay(value: "이름은 2자 이상, 8자 이하로 입력해주세요!")
     
