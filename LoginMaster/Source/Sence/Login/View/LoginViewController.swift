@@ -9,10 +9,12 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
+    let api = APIService()
     let mainview = LoginView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func loadView() {

@@ -9,11 +9,11 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class SignupViewController: BaseViewController {
+final class SignupViewController: BaseViewController {
     
-    let mainview = SignupView()
-    let viewModel = SignupViewModel()
-    let disposeBag = DisposeBag()
+    private let mainview = SignupView()
+    private let viewModel = SignupViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class SignupViewController: BaseViewController {
         bindValidEmail()
         bindValidPassword()
         signupButtonbind()
+        print("@@@@@@@@",UserDefaults.standard.string(forKey: "token"))
     }
     
     override func loadView() {
@@ -43,7 +44,7 @@ class SignupViewController: BaseViewController {
             .orEmpty
             .map { $0.count >= 2 && $0.count <= 8 }
         
-        validationName.bind(to: mainview.signupButton.rx.isEnabled, mainview.emailLabel.rx.isHidden,
+        validationName.bind(to: mainview.emailLabel.rx.isHidden,
                             mainview.emailValidLabel.rx.isHidden, mainview.passwordLabel.rx.isHidden, mainview.passwordValidLabel.rx.isHidden)
         .disposed(by: disposeBag)
         
@@ -66,7 +67,7 @@ class SignupViewController: BaseViewController {
             .orEmpty
             .map { $0.count >= 5  }
         
-        validationEmail.bind(to: mainview.signupButton.rx.isEnabled, mainview.passwordLabel.rx.isHidden, mainview.passwordValidLabel.rx.isHidden)
+        validationEmail.bind(to: mainview.passwordLabel.rx.isHidden, mainview.passwordValidLabel.rx.isHidden)
         .disposed(by: disposeBag)
         
         validationEmailFalse.bind(to: mainview.emailValidLabel.rx.isHidden)
@@ -81,21 +82,21 @@ class SignupViewController: BaseViewController {
             .drive(mainview.passwordValidLabel.rx.text)
             .disposed(by: disposeBag)
         
-        let validationEmail = mainview.passwordLabel.rx.text
+        let validationPassword = mainview.passwordLabel.rx.text
             .orEmpty
             .map { $0.count < 2 || $0.count > 10 }
         
-        let validationEmailFalse = mainview.passwordLabel.rx.text
+        let validationPasswordFalse = mainview.passwordLabel.rx.text
             .orEmpty
             .map { $0.count >= 2 && $0.count <= 10  }
         
-        validationEmail.bind(to: mainview.signupButton.rx.isEnabled,  mainview.passwordValidLabel.rx.isHidden)
+        validationPassword.bind(to:   mainview.passwordValidLabel.rx.isHidden)
         .disposed(by: disposeBag)
         
-        validationEmailFalse.bind(to: mainview.passwordValidLabel.rx.isHidden)
+        validationPasswordFalse.bind(to: mainview.passwordValidLabel.rx.isHidden, mainview.signupButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        validationEmail
+        validationPassword
             .withUnretained(self)
             .bind { (vc, value) in
                 let color: UIColor = value ? .systemGray : .systemOrange
@@ -108,6 +109,8 @@ class SignupViewController: BaseViewController {
         mainview.signupButton.rx.tap
             .withUnretained(self)
             .bind { (vc, _) in
+                
+                vc.viewModel.postSignup(name: vc.mainview.userNameLabel.text!, email: vc.mainview.emailLabel.text!, password: vc.mainview.passwordLabel.text!)
                 vc.present(LoginViewController(), animated: true)
             }
     }
