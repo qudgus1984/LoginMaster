@@ -16,14 +16,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let rootViewController = SignupViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        window?.rootViewController = navigationController
+        if UserDefaults.standard.string(forKey: "token") != nil {
+            let rootViewController = ProfileViewController()
+            let navigationController = UINavigationController(rootViewController: rootViewController)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+            guard let _ = (scene as? UIWindowScene) else { return }
+            
+        } else {
+            let rootViewController = SignupViewController()
+            let navigationController = UINavigationController(rootViewController: rootViewController)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+            guard let _ = (scene as? UIWindowScene) else { return }
+            
+        }
+
         window?.makeKeyAndVisible()
-        guard let _ = (scene as? UIWindowScene) else { return }
-        
-        window?.makeKeyAndVisible()
-        
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

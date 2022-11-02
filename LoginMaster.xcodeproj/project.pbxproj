@@ -32,6 +32,7 @@
 		2FA477862912466A00AD4CB8 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA477852912466A00AD4CB8 /* SignupViewModel.swift */; };
 		2FA477882912610500AD4CB8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA477872912610500AD4CB8 /* Endpoint.swift */; };
 		2FA4778A2912614700AD4CB8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA477892912614700AD4CB8 /* APIService.swift */; };
+		2FB1095929127C2F00823F4E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095829127C2F00823F4E /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		2FA477852912466A00AD4CB8 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		2FA477872912610500AD4CB8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		2FA477892912614700AD4CB8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2FB1095829127C2F00823F4E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 		2FA4778B29127A0A00AD4CB8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2FB1095829127C2F00823F4E /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				2FA477692912322B00AD4CB8 /* ProfileView.swift in Sources */,
 				2FA47761291231BB00AD4CB8 /* ReusableProtocol.swift in Sources */,
 				2FA477862912466A00AD4CB8 /* SignupViewModel.swift in Sources */,
+				2FB1095929127C2F00823F4E /* LoginViewModel.swift in Sources */,
 				2FA47760291231BB00AD4CB8 /* UIViewController+.swift in Sources */,
 				2FA4777E2912365A00AD4CB8 /* SignupViewController.swift in Sources */,
 				2FA47763291231BB00AD4CB8 /* BaseTableViewCell.swift in Sources */,
