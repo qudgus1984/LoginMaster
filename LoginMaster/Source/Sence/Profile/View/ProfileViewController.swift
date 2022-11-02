@@ -8,12 +8,18 @@
 import UIKit
 
 class ProfileViewController: BaseViewController {
-
+    
+    let mainview = ProfileView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    override func loadView() {
+        super.view = mainview
+    }
+    
+    
 }
+
 

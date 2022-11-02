@@ -9,11 +9,14 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
+    let mainview = LoginView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    override func loadView() {
+        super.view = mainview
+    }
 }
 
