@@ -46,12 +46,13 @@ class APIService {
         }
     }
     
-    func profile() {
-        let api = SeSACAPI.profile
+    func profile(api: SeSACAPI) {
+//        let api = SeSACAPI.profile
         AF.request(api.url, method: .get, headers: api.header).responseDecodable(of: Profile.self) { response in
             
             switch response.result {
             case .success(let data):
+                data.user.email
                 print(data)
                 
             case .failure(_):

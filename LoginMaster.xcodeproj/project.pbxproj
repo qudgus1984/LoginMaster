@@ -33,6 +33,7 @@
 		2FA477882912610500AD4CB8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA477872912610500AD4CB8 /* Endpoint.swift */; };
 		2FA4778A2912614700AD4CB8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA477892912614700AD4CB8 /* APIService.swift */; };
 		2FB1095929127C2F00823F4E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095829127C2F00823F4E /* LoginViewModel.swift */; };
+		2FB1095C29128AA500823F4E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1095B29128AA500823F4E /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		2FA477872912610500AD4CB8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		2FA477892912614700AD4CB8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2FB1095829127C2F00823F4E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2FB1095B29128AA500823F4E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		2FA477662912321200AD4CB8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2FB1095A29128A9600823F4E /* ViewModel */,
 				2FA477672912321B00AD4CB8 /* View */,
 			);
 			path = Profile;
@@ -286,6 +289,14 @@
 			isa = PBXGroup;
 			children = (
 				2FB1095829127C2F00823F4E /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FB1095A29128A9600823F4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FB1095B29128AA500823F4E /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -375,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA4778A2912614700AD4CB8 /* APIService.swift in Sources */,
+				2FB1095C29128AA500823F4E /* ProfileViewModel.swift in Sources */,
 				2FA477832912368400AD4CB8 /* LoginViewController.swift in Sources */,
 				2FA4773E2912319C00AD4CB8 /* ProfileViewController.swift in Sources */,
 				2FA47764291231BB00AD4CB8 /* BaseCollectionViewCell.swift in Sources */,
