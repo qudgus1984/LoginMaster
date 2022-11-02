@@ -21,7 +21,6 @@ final class SignupViewController: BaseViewController {
         bindValidEmail()
         bindValidPassword()
         signupButtonbind()
-        print("@@@@@@@@",UserDefaults.standard.string(forKey: "token"))
     }
     
     override func loadView() {

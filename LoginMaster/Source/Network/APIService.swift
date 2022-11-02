@@ -33,8 +33,7 @@ class APIService {
         
     }
     
-    func login() {
-        let api = SeSACAPI.login(email: "handsomeHue@handsomeHue.com", password: "12345678")
+    func login(api: SeSACAPI) {
        
         AF.request(api.url, method: .post, parameters: api.parameter, headers: api.header).validate(statusCode: 200...299).responseDecodable(of: Login.self) { response in
             switch response.result {

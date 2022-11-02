@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class LoginViewController: BaseViewController {
 
@@ -19,6 +21,10 @@ class LoginViewController: BaseViewController {
 
     override func loadView() {
         super.view = mainview
+    }
+    
+    func bind() {
+        
     }
 }
 

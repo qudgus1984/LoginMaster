@@ -239,6 +239,7 @@
 		2FA477782912360F00AD4CB8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2FA4778B29127A0A00AD4CB8 /* ViewModel */,
 				2FA4777F2912367300AD4CB8 /* View */,
 			);
 			path = Login;
@@ -275,6 +276,13 @@
 			isa = PBXGroup;
 			children = (
 				2FA477852912466A00AD4CB8 /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FA4778B29127A0A00AD4CB8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
